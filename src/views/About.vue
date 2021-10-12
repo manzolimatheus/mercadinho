@@ -82,7 +82,6 @@
             style="width: 100%; height: 100%"
             marginheight="0"
             marginwidth="0"
-            data-aos="zoom-out"
           ></iframe>
         </div>
       </div>
@@ -138,5 +137,11 @@
 
 .duas-colunas h1 {
   padding: 10%;
+}
+
+@media (max-width: 768px){
+  .colunas, .duas-colunas{
+    grid-template-columns: 100%;
+  }
 }
 </style>
