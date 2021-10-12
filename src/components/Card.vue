@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" data-aos="flip-left">
     <h3 class="truncate">
       {{ nome }}
     </h3>

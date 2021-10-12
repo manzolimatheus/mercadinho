@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <Destaque />
+    <Destaque/>
     <div class="container">
-    <h1>Conheça nossos serviços</h1>
+    <h1 data-aos="fade-right">Conheça nossos serviços</h1>
     <div class="cards">
       <Card
         nome="Açougue"

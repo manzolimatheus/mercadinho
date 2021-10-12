@@ -7,9 +7,26 @@
       </div>
       <div class="links">
           <h3><ion-icon name="key-outline"></ion-icon> Acesso rápido</h3>
-        <router-link to="/">Início</router-link>
+        <router-link to="/"
+          ><ion-icon name="home-outline"></ion-icon> Início</router-link
+        >
         <br>
-        <router-link to="/about">Sobre</router-link>
+        <router-link to="/about"
+          ><ion-icon name="flower-outline"></ion-icon> Sobre</router-link
+        >
+        <br>
+        <router-link to="/items"
+          ><ion-icon name="gift-outline"></ion-icon> Itens</router-link
+        >
+        <br>
+        <router-link to="/cart"
+          ><ion-icon name="cart-outline"></ion-icon> Carrinho</router-link
+        >
+        <br>
+        <router-link to="/orders"
+          ><ion-icon name="arrow-redo-outline"></ion-icon> Meus pedidos</router-link
+        >
+        <br>
       </div>
       <div class="localizacao">
           <h3><ion-icon name="location-outline"></ion-icon> Venha conhecer</h3>
