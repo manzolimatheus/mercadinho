@@ -86,4 +86,16 @@ export default {
   background: none;
   border: 0;
 }
+
+@media (max-width: 768px) {
+  .col-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  .col-text{
+    padding-left: 5%;
+  }
+}
 </style>

@@ -9,6 +9,7 @@
             placeholder="Nome completo"
             v-model="nome"
             required
+            class="custom-input"
           />
           <br />
           <div>
@@ -17,14 +18,46 @@
               placeholder="Endereço completo"
               v-model="endereco"
               required
+              class="custom-input"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Ponto de referência (Opcional)"
+              v-model="referencia"
+              class="custom-input"
             />
           </div>
           <br />
-          <input
-            type="text"
-            placeholder="Ponto de referência (Opcional)"
-            v-model="referencia"
-          />
+          <div class="display: inline-block">
+            <input
+              type="checkbox"
+              v-model="precisa_troco"
+              required
+              style="margin-right: 1%"
+              @click="SwitchTroco"
+            />
+            <span>Precisa de troco?</span>
+          </div>
+          <br />
+          <div v-show="precisa_troco">
+            <label for="valor_a_pagar"
+              >Digite a quantia que você entregará ao entregador quando ele
+              chegar.</label
+            >
+            <br />
+            R$
+            <input
+              type="number"
+              v-model="valor_a_pagar"
+              class="custom-input"
+              step="0.01"
+              :min="Number(this.preco.preco[0]).toFixed(2)"
+              @input="GetTroco()"
+            />
+            <p class="mt">Você receberá R${{ troco.toFixed(2) }} de troco.</p>
+          </div>
         </form>
       </div>
       <div class="map mt">
@@ -65,9 +98,24 @@
       </button>
       <p v-show="msg">Preencha todos os campos para continuar</p>
     </div>
-    <div class="pix" v-show="show_pix">
-      <p>Pague <strong>R${{ preco.preco }}</strong> através desse código PIX para podermos confirmar seu pedido.</p>
-      <img src="/img/qrcode-pix.png" alt="Código pix para pagar" />
+    <div class="full-info" v-show="show_info">
+      <h1>
+        Pague <strong>R${{ Number(this.preco.preco[0]).toFixed(2) }}</strong> ao
+        entregador quando ele chegar, para receber seus produtos.
+      </h1>
+      <div class="animation-info">
+        <lottie-player
+          src="https://assets3.lottiefiles.com/packages/lf20_jmejybvu.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+        <div class="info">
+          <h1>Obrigado pela preferência!</h1>
+          <h2>Tempo de espera médio: 1h</h2>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -80,8 +128,11 @@ export default {
       nome: null,
       endereco: null,
       referencia: null,
+      precisa_troco: false,
+      valor_a_pagar: 0,
+      troco: 0,
       show_form: true,
-      show_pix: false,
+      show_info: false,
       msg: false,
     };
   },
@@ -92,30 +143,53 @@ export default {
     NextStep() {
       if (this.nome !== null && this.endereco !== null) {
         this.show_form = false;
-        this.show_pix = true;
-        this.PostData()
+        this.show_info = true;
+        this.PostData();
       } else {
         this.msg = true;
       }
     },
-    async PostData(){
-      fetch('http://localhost:3000/pedidos', {
-        method: 'post',
-        headers:{
-           'Content-Type': 'application/json'
+    async PostData() {
+      fetch("http://localhost:3000/pedidos", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           nome: this.nome,
           endereco: this.endereco,
           referencia: this.referencia,
-          pedido: JSON.parse(localStorage.getItem('Cart'))
-        })
-      })
-      .then(response => {
-        console.log(response)
-        localStorage.removeItem("Cart")
-      })
-    }
+          valor_compra: Number(this.preco.preco[0]).toFixed(2),
+          troco: this.troco.toFixed(2),
+          pedido: JSON.parse(localStorage.getItem("Cart")),
+          status: "Coletando pedido",
+        }),
+      }).then((response) => {
+        console.log(response);
+        localStorage.removeItem("Cart");
+      });
+
+      const user = {
+        nome: this.nome,
+        endereco: this.endereco,
+        referencia: this.referencia,
+      };
+
+      localStorage.setItem("Auth", JSON.stringify(user));
+    },
+    SwitchTroco() {
+      this.troco = 0;
+      this.valor_a_pagar = 0;
+      this.precisa_troco = !this.precisa_troco;
+    },
+    GetTroco() {
+      this.troco = this.valor_a_pagar - Number(this.preco.preco[0]).toFixed(2);
+    },
+  },
+  mounted() {
+    this.nome = JSON.parse(localStorage.getItem('Auth')).nome;
+    this.endereco = JSON.parse(localStorage.getItem('Auth')).endereco;
+    this.referencia = JSON.parse(localStorage.getItem('Auth')).referencia;
   },
 };
 </script>
@@ -125,7 +199,7 @@ export default {
   text-align: center;
 }
 
-input {
+.custom-input {
   margin-top: 1%;
   padding: 1%;
   border: 2px solid grey;
@@ -157,7 +231,22 @@ iframe {
   width: 50%;
 }
 
-.pix{
+.full-info {
   text-align: center;
+}
+
+.full-info h1 {
+  font-weight: 300;
+}
+
+.animation-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-info lottie-player {
+  width: 100%;
 }
 </style>

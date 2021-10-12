@@ -30,6 +30,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: white;
+  text-align: center;
 }
 
 #destaque-frase{
@@ -37,7 +38,12 @@ export default {
 }
 
 .destaque p{
-  text-align: center;
   color: #63ec91;
+}
+
+@media (max-width: 768px) {
+  .destaque{
+    font-size: large;
+  }
 }
 </style>

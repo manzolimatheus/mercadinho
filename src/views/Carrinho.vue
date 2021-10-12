@@ -9,6 +9,7 @@
         >Finalizar compra <ion-icon name="arrow-forward-outline"></ion-icon
       ></a>
     </div>
+    <p v-show="msg">Você não pode continuar com o carrinho vazio!</p>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
   data() {
     return {
       preco: 0,
+      msg: false,
     };
   },
   methods: {
@@ -30,12 +32,16 @@ export default {
       this.preco = preco;
     },
     Finalize() {
-      this.$router.push({
-        name: "Final",
-        params: {
-          preco: this.preco,
-        },
-      });
+      if (this.preco <= 0) {
+        this.msg = true;
+      } else {
+        this.$router.push({
+          name: "Final",
+          params: {
+            preco: this.preco,
+          },
+        });
+      }
     },
   },
 };
@@ -46,5 +52,16 @@ export default {
   background-color: #36bd5e;
   padding: 2%;
   color: white;
+}
+
+.container-carrinho p{
+  text-align: center;
+  color: tomato;
+}
+
+@media (max-width: 768px) {
+  .container-carrinho {
+    margin-bottom: 10%;
+  }
 }
 </style>

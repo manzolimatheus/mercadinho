@@ -7,11 +7,11 @@
       @empty-cart="ClearItems"
     />
     <div class="data-loading">
-      <h1>Items</h1>
-      <hr />
-      <div class="data">
-        <div v-for="array in items" :key="items.indexOf(array)">
-          <div v-for="item in array" :key="item.id">
+      <div class="items-data">
+        <h1>Items</h1>
+        <hr />
+        <div class="data">
+          <div v-for="item in items[0]" :key="items.indexOf(item)">
             <Card :nome="item.nome" :img="item.img" :preco="item.preco" />
             <button class="adicionar" @click="UpdateCart(item)">
               <h3>
@@ -46,25 +46,13 @@ export default {
       items: [],
       precart: [],
       total: 0,
+      query: "http://localhost:3000/itens",
+      categorias: [],
     };
   },
   methods: {
-    async LoadAcougue() {
-      fetch("http://localhost:3000/acougue")
-        .then((response) => response.json())
-        .then((item) => {
-          this.items.push(item);
-        });
-    },
-    async LoadPadaria() {
-      fetch("http://localhost:3000/padaria")
-        .then((response) => response.json())
-        .then((item) => {
-          this.items.push(item);
-        });
-    },
-    async LoadHortifruti() {
-      fetch("http://localhost:3000/hortifruti")
+    async LoadData() {
+      fetch(this.query)
         .then((response) => response.json())
         .then((item) => {
           this.items.push(item);
@@ -90,22 +78,20 @@ export default {
   },
   mounted() {
     this.LoadCart();
-    this.LoadAcougue();
-    this.LoadPadaria();
-    this.LoadHortifruti();
+    this.LoadData();
   },
 };
 </script>
 
 <style>
-.data-loading {
-  padding: 5%;
-}
-
 .data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 6%;
+}
+
+.items-data {
+  padding: 3%;
 }
 
 .adicionar {
@@ -117,5 +103,17 @@ export default {
 
 .adicionar:hover {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .data {
+    padding: 0;
+    grid-template-columns: 50% 50%;
+  }
+
+  .imagem {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

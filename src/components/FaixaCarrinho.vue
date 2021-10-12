@@ -60,4 +60,15 @@ button {
   text-align: center;
   margin: 1%;
 }
+
+@media (max-width: 768px){
+  .carrinho{
+    grid-template-columns: 100%;
+  }
+
+  .buttons a, button{
+    font-size: large;
+    padding: 3%;
+  }
+}
 </style>

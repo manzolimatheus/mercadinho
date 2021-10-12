@@ -51,4 +51,10 @@ export default {
   text-align: center;
 }
 
+@media (max-width: 768px){
+  .cards{
+    overflow-x: scroll;
+  }
+}
+
 </style>

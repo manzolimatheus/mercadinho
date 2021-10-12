@@ -13,7 +13,7 @@
       </div>
       <div class="localizacao">
           <h3><ion-icon name="location-outline"></ion-icon> Venha conhecer</h3>
-          <p>Rua XXX-XXX</p>
+          <p>R. Agenos Carreiro, 173 - Jardim Suecia, Mogi Guaçu - SP, 13848-510</p>
       </div>
     </footer>
   </div>
@@ -35,5 +35,11 @@ footer {
 
 footer a{
   color: #272727;
+}
+
+@media (max-width: 768px){
+  footer{
+    grid-template-columns: 100%;
+  }
 }
 </style>

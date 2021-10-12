@@ -1,151 +1,174 @@
 {
-  "acougue": [
+  "itens": [
     {
       "id": 1,
       "nome": "Acém Bovino",
       "preco": 17.99,
+      "categoria": "acougue",
       "img": "https://s.cornershopapp.com/product-images/2659445.jpg?versionId=4bjsyJIu4w7SmfEhe2XTaK5Aus5ssshk"
     },
     {
       "id": 2,
       "nome": "Patinho Bovino",
       "preco": 26.99,
+      "categoria": "acougue",
       "img": "https://images.tcdn.com.br/img/img_prod/765092/patinho_bovino_preco_por_kg_332_1_20200326163954.jpg"
     },
     {
       "id": 3,
       "nome": "Paleta Bovina",
       "preco": 19.99,
+      "categoria": "acougue",
       "img": "https://assets.instabuy.com.br/ib.item.image.big/b-e7ffbbeb3b2f4f8581a779554e95f382.jpeg"
     },
     {
       "id": 4,
       "nome": "Coxão Mole Bovino",
       "preco": 24.99,
+      "categoria": "acougue",
       "img": "https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/14358/medium/coxao-mole-bovino-resfriado-kg_55950.jpg"
-    }
-  ],
-  "padaria": [
+    },
     {
       "id": 1,
       "nome": "Pão Francês",
       "preco": 9.99,
+      "categoria": "padaria",
       "img": "https://hiperideal.vteximg.com.br/arquivos/ids/181563-1000-1000/82929.jpg?v=637248333767400000"
     },
     {
       "id": 2,
       "nome": "Pão Panco Bisnaguinhas Originais Pacote 300g",
       "preco": 4.99,
+      "categoria": "padaria",
       "img": "https://images-americanas.b2w.io/produtos/01/00/img/1796673/6/1796673621_1SZ.jpg"
     },
     {
       "id": 3,
       "nome": "Pão de Forma Newbread Tradicional Pacote 500g",
       "preco": 4.79,
+      "categoria": "padaria",
       "img": "http://www.newbread.com.br/wp-content/uploads/Tradicional-450g.jpg"
-    }
-  ],
-  "hortifruti": [
+    },
     {
       "id": 1,
       "nome": "Couve Picada Marangoni Embalagem 200g",
       "preco": 4.59,
+      "categoria": "hortifruti",
       "img": "https://d8vlg9z1oftyc.cloudfront.net/minhacooper/image/product/bafae7dac926bdec26e93008cd6b251f20191203152146/850/couve-folha-picada-verd-facil-pacote-200g_2440.jpg"
     },
     {
       "id": 2,
       "nome": "Rúcula Hidropônica Sítio Portão do Belém Maço 1 Un",
       "preco": 4.29,
+      "categoria": "hortifruti",
       "img": "https://api.tendaatacado.com.br/fotos/1545_big.jpg"
     },
     {
       "id": 3,
       "nome": "Alface Crespa Marangoni Maço",
       "preco": 3.69,
+      "categoria": "hortifruti",
       "img": "https://s.cornershopapp.com/product-images/2659481.jpg?versionId=Tpb8Zc5Q7gwBOUrVreesBgLHBN9Sf5w1"
     }
   ],
   "pedidos": [
     {
-      "nome": "Matheus",
-      "endereco": "a",
-      "referencia": "a",
+      "nome": "Matheus Manzoli Pires",
+      "endereco": "Edson Cândido de Almeida, 520",
+      "referencia": "Terreno baldio em frente",
+      "valor_compra": "118.01",
+      "troco": "81.99",
       "pedido": [
         {
-          "id": 1,
-          "nome": "Acém Bovino",
-          "preco": 17.99,
-          "img": "https://s.cornershopapp.com/product-images/2659445.jpg?versionId=4bjsyJIu4w7SmfEhe2XTaK5Aus5ssshk"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "nome": "Matheus Manzoli",
-      "endereco": "Jardim SUécia",
-      "referencia": null,
-      "pedido": [
-        {
-          "id": 4,
-          "nome": "Coxão Mole Bovino",
-          "preco": 24.99,
-          "img": "https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/14358/medium/coxao-mole-bovino-resfriado-kg_55950.jpg"
+          "id": 3,
+          "nome": "Alface Crespa Marangoni Maço",
+          "preco": 3.69,
+          "categoria": "hortifruti",
+          "img": "https://s.cornershopapp.com/product-images/2659481.jpg?versionId=Tpb8Zc5Q7gwBOUrVreesBgLHBN9Sf5w1"
         },
         {
-          "id": 4,
-          "nome": "Coxão Mole Bovino",
-          "preco": 24.99,
-          "img": "https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/14358/medium/coxao-mole-bovino-resfriado-kg_55950.jpg"
+          "id": 1,
+          "nome": "Couve Picada Marangoni Embalagem 200g",
+          "preco": 4.59,
+          "categoria": "hortifruti",
+          "img": "https://d8vlg9z1oftyc.cloudfront.net/minhacooper/image/product/bafae7dac926bdec26e93008cd6b251f20191203152146/850/couve-folha-picada-verd-facil-pacote-200g_2440.jpg"
         },
         {
           "id": 3,
           "nome": "Pão de Forma Newbread Tradicional Pacote 500g",
           "preco": 4.79,
+          "categoria": "padaria",
           "img": "http://www.newbread.com.br/wp-content/uploads/Tradicional-450g.jpg"
         },
         {
-          "id": 3,
-          "nome": "Alface Crespa Marangoni Maço",
-          "preco": 3.69,
-          "img": "https://s.cornershopapp.com/product-images/2659481.jpg?versionId=Tpb8Zc5Q7gwBOUrVreesBgLHBN9Sf5w1"
+          "id": 4,
+          "nome": "Coxão Mole Bovino",
+          "preco": 24.99,
+          "categoria": "acougue",
+          "img": "https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/14358/medium/coxao-mole-bovino-resfriado-kg_55950.jpg"
         },
         {
-          "id": 3,
-          "nome": "Alface Crespa Marangoni Maço",
-          "preco": 3.69,
-          "img": "https://s.cornershopapp.com/product-images/2659481.jpg?versionId=Tpb8Zc5Q7gwBOUrVreesBgLHBN9Sf5w1"
+          "id": 1,
+          "nome": "Pão Francês",
+          "preco": 9.99,
+          "categoria": "padaria",
+          "img": "https://hiperideal.vteximg.com.br/arquivos/ids/181563-1000-1000/82929.jpg?v=637248333767400000"
         },
         {
           "id": 2,
-          "nome": "Rúcula Hidropônica Sítio Portão do Belém Maço 1 Un",
-          "preco": 4.29,
-          "img": "https://api.tendaatacado.com.br/fotos/1545_big.jpg"
+          "nome": "Pão Panco Bisnaguinhas Originais Pacote 300g",
+          "preco": 4.99,
+          "categoria": "padaria",
+          "img": "https://images-americanas.b2w.io/produtos/01/00/img/1796673/6/1796673621_1SZ.jpg"
+        },
+        {
+          "id": 3,
+          "nome": "Paleta Bovina",
+          "preco": 19.99,
+          "categoria": "acougue",
+          "img": "https://assets.instabuy.com.br/ib.item.image.big/b-e7ffbbeb3b2f4f8581a779554e95f382.jpeg"
         },
         {
           "id": 2,
           "nome": "Patinho Bovino",
           "preco": 26.99,
+          "categoria": "acougue",
           "img": "https://images.tcdn.com.br/img/img_prod/765092/patinho_bovino_preco_por_kg_332_1_20200326163954.jpg"
         },
         {
           "id": 1,
-          "nome": "Pão Francês",
-          "preco": 9.99,
-          "img": "https://hiperideal.vteximg.com.br/arquivos/ids/181563-1000-1000/82929.jpg?v=637248333767400000"
-        },
-        {
-          "id": 1,
-          "nome": "Pão Francês",
-          "preco": 9.99,
-          "img": "https://hiperideal.vteximg.com.br/arquivos/ids/181563-1000-1000/82929.jpg?v=637248333767400000"
-        },
-        {
-          "id": 1,
-          "nome": "Pão Francês",
-          "preco": 9.99,
-          "img": "https://hiperideal.vteximg.com.br/arquivos/ids/181563-1000-1000/82929.jpg?v=637248333767400000"
+          "nome": "Acém Bovino",
+          "preco": 17.99,
+          "categoria": "acougue",
+          "img": "https://s.cornershopapp.com/product-images/2659445.jpg?versionId=4bjsyJIu4w7SmfEhe2XTaK5Aus5ssshk"
         }
       ],
+      "status": "Coletando pedido",
+      "id": 1
+    },
+    {
+      "nome": "Matheus Manzoli Pires",
+      "endereco": "Edson Cândido de Almeida, 520",
+      "referencia": "Terreno baldio em frente",
+      "valor_compra": "118.01",
+      "troco": "81.99",
+      "pedido": [
+        {
+          "id": 3,
+          "nome": "Alface Crespa Marangoni Maço",
+          "preco": 3.69,
+          "categoria": "hortifruti",
+          "img": "https://s.cornershopapp.com/product-images/2659481.jpg?versionId=Tpb8Zc5Q7gwBOUrVreesBgLHBN9Sf5w1"
+        },
+        {
+          "id": 1,
+          "nome": "Couve Picada Marangoni Embalagem 200g",
+          "preco": 4.59,
+          "categoria": "hortifruti",
+          "img": "https://d8vlg9z1oftyc.cloudfront.net/minhacooper/image/product/bafae7dac926bdec26e93008cd6b251f20191203152146/850/couve-folha-picada-verd-facil-pacote-200g_2440.jpg"
+        }
+      ],
+      "status": "Coletando pedido",
       "id": 2
     }
   ]
