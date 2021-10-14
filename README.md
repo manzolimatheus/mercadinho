@@ -1,9 +1,9 @@
 
-## 🍔 Mercado São Miguel Arcanjo
+## 🍔 Mercado São Miguel Arcanjo (Não finalizado)
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/manzolimatheus/mercadinho/main/public/img/logo-mercado.png">
-<img src="https://content.paodeacucar.com/wp-content/uploads/2019/06/8-dicas-%C3%BAteis-2.jpg" width="100%">
+<img src="https://i.imgur.com/dFMP0xm.png" width="100%">
 </div>
 
 ## Sobre
@@ -46,3 +46,7 @@ npm run serve
 ```
 npm run backend
 ```
+## Screenshots
+
+<img src="https://i.imgur.com/lQKBrh2.png">
+<img src="https://i.imgur.com/Kw1Ge18.png">
