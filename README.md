@@ -21,7 +21,7 @@ Mercado São Miguel Arcanjo é uma aplicação feita com Vue.js para simular uma
 
 **👨🏻‍💻 Tecnologias utilizadas**
 
-Para criar a Hamburgueria Sunday utilizei HTML, CSS, JS e VUE.js.
+Para criar o Mercadinho utilizei HTML, CSS, JS e VUE.js.
 Como API REST utilizei JSON-Server, uma API fake para desenvolvedores front-end lidarem com dados.
 
 <img src="https://www.clipartmax.com/png/full/313-3138160_this-flag-is-based-on-the-logos-for-html5-js-html-css.png" width="80px">
