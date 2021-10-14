@@ -1,9 +1,9 @@
 
-## 🍔 Mercado São Miguel Arcanjo (Não finalizado)
+## 🍔 Mercado São Miguel Arcanjo
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/manzolimatheus/mercadinho/main/public/img/logo-mercado.png">
-<img src="https://i.imgur.com/dFMP0xm.png" width="100%">
+<img src="https://i.imgur.com/YIbInvi.png" width="100%">
 </div>
 
 ## Sobre
@@ -48,5 +48,13 @@ npm run backend
 ```
 ## Screenshots
 
-<img src="https://i.imgur.com/lQKBrh2.png">
-<img src="https://i.imgur.com/Kw1Ge18.png">
+<img src="https://i.imgur.com/JHQwCyV.png">
+<img src="https://i.imgur.com/V1FzWFz.png">
+<img src="https://i.imgur.com/i972DPg.png">
+<img src="https://i.imgur.com/InLrTOZ.png">
+<img src="https://i.imgur.com/bdPwota.png">
+<img src="https://i.imgur.com/sE7Zrm1.png">
+<img src="https://i.imgur.com/VEnxWwQ.png">
+<img src="https://i.imgur.com/G046byQ.png">
+<img src="https://i.imgur.com/QHFNnxX.png">
+<img src="https://i.imgur.com/IBG6zMf.png">
